@@ -1,8 +1,12 @@
 import { AppRegistry, Text } from 'react-native';
-import React from 'react';
+import React, { Component } from 'react';
 
-const App = () => (
-    <Text>oui</Text>
-);
+class App extends Component {
+    render() {
+        return (
+            <Text>oui</Text>
+        );
+    }
+}
 
 AppRegistry.registerComponent('awaleAndroid', () => App);
