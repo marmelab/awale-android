@@ -4,12 +4,13 @@ import {
     isStarving,
     isPickPossible,
     pick,
-    willStarvePlayer,
     canPlayerPlayPosition,
     initBoardTest,
     canFeedPlayer,
+    getWinner,
 } from './Board';
 
+import { GAME_CONTINUE } from '../constants/Constants';
 import createPlayer from '../player/Player';
 
 describe('Board', () => {
@@ -165,5 +166,23 @@ describe('Board', () => {
         const board = create();
         const playerOne = createPlayer(0);
         expect(canPlayerPlayPosition(playerOne, board, 99)).toEqual(false);
+    });
+
+    it('Get winner for max score should return player one', () => {
+        const board = create();
+        const playerOne = createPlayer(0);
+        expect(getWinner(playerOne, board, [48, 0])).toEqual(0);
+    });
+
+    it('Get winner for zero score should return player one', () => {
+        const board = create();
+        const playerTwo = createPlayer(1);
+        expect(getWinner(playerTwo, board, [48, 0])).toEqual(0);
+    });
+
+    it('Get winner for zero score should return player one', () => {
+        const board = create();
+        const playerOne = createPlayer(0);
+        expect(getWinner(playerOne, board, [20, 10])).toEqual(GAME_CONTINUE);
     });
 });

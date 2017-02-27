@@ -1,4 +1,4 @@
-import { PIT_COUNT } from '../constants/Constants';
+import { PIT_COUNT, GAME_CONTINUE, PEBBLE_COUNT } from '../constants/Constants';
 
 export function create(pitnumber = 12, pebblenumber = 4) {
     if (pitnumber <= 0 || pitnumber % 2 !== 0) {
@@ -78,6 +78,18 @@ export function canPlayerPlayPosition(player, board, position) {
     }
 
     return movePossible;
+}
+
+export function getWinner(player, board, score) {
+    const minScore = ((PIT_COUNT * PEBBLE_COUNT) / 2);
+    const starving = isStarving(board, player.minPick, player.maxPick);
+    if (starving || score[player.number] > minScore) {
+        return player.number;
+    } else if (score[1 - player.number] > minScore) {
+        return 1 - player.number;
+    }
+
+    return GAME_CONTINUE;
 }
 
 export function initBoardTest(b) {
