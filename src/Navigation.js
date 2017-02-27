@@ -3,7 +3,7 @@ import { Navigator, View } from 'react-native';
 import Welcome from './navigation/Welcome';
 import Play from './navigation/Play';
 
-export default () => {
+const Navigation = () => {
     const renderNavigationScene = (route, navigator) => {
         switch (route.id) {
         case 'Welcome':
@@ -22,3 +22,5 @@ export default () => {
         />
     );
 };
+
+export default Navigation;
