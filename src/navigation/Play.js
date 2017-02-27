@@ -4,6 +4,11 @@ import { View, Navigator, Button } from 'react-native';
 import Board from '../awale/board/Board';
 
 export default class Play extends Component {
+    static propTypes = {
+        navigator: PropTypes.instanceOf(Navigator).isRequired,
+        againstComputer: PropTypes.bool.isRequired,
+    }
+
     constructor(props) {
         super(props);
 
@@ -12,7 +17,7 @@ export default class Play extends Component {
         };
     }
 
-    handleGoHomeClick() {
+    handleGoHomeClick = () => {
         this.props.navigator.replace({ id: 'Welcome' });
     }
 
@@ -22,7 +27,7 @@ export default class Play extends Component {
         return (
             <View>
                 <View>
-                    <Button onPress={() => this.handleGoHomeClick()} title="Back to home" />
+                    <Button onPress={this.handleGoHomeClick} title="Back to home" />
                 </View>
 
                 <View>
@@ -32,8 +37,3 @@ export default class Play extends Component {
         );
     }
 }
-
-Play.propTypes = {
-    navigator: PropTypes.instanceOf(Navigator).isRequired,
-    againstComputer: PropTypes.bool.isRequired,
-};

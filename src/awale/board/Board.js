@@ -24,7 +24,6 @@ const styles = StyleSheet.create({
 });
 
 export default class Board extends Component {
-
     render() {
         const size = this.props.board.length;
         const halfSize = size / 2;

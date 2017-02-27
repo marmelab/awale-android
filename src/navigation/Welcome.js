@@ -2,6 +2,9 @@ import React, { PropTypes, Component } from 'react';
 import { View, Text, Navigator, Button } from 'react-native';
 
 export default class Welcome extends Component {
+    static propTypes = {
+        navigator: PropTypes.instanceOf(Navigator).isRequired,
+    }
 
     startPlaying(playAgainstComputer) {
         this.props.navigator.replace({ id: 'Play', againstComputer: playAgainstComputer });
@@ -25,7 +28,3 @@ export default class Welcome extends Component {
         );
     }
 }
-
-Welcome.propTypes = {
-    navigator: PropTypes.instanceOf(Navigator).isRequired,
-};
