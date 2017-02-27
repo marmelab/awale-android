@@ -6,6 +6,11 @@ module.exports = {
         "jsx-a11y",
         "import"
     ],
+    "env": {
+        "mocha": true,
+        "browser": true,
+        "jest": true
+    },
     "rules": {
         "indent": ["error", 4],
         "max-len": ["error", { "code": 120, "tabWidth": 4, "ignoreUrls": true }],
