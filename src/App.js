@@ -5,4 +5,6 @@ const App = () => (
     <Text>oui</Text>
  );
 
+App.type = App;
+
 export default App;
