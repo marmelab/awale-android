@@ -1,11 +1,11 @@
 import { PIT_COUNT } from '../constants/Constants';
 
-export function create(pitNumber = 12, pebbleNumber = 4) {
-    if (pitNumber <= 0 || pitNumber % 2 !== 0) {
+export function create(pitnumber = 12, pebblenumber = 4) {
+    if (pitnumber <= 0 || pitnumber % 2 !== 0) {
         throw new Error('Board size must be even.');
     }
 
-    return Array(pitNumber).fill(pebbleNumber);
+    return Array(pitnumber).fill(pebblenumber);
 }
 
 export function dealPosition(board, position) {
@@ -39,7 +39,7 @@ export function pick(player, board, position, score) {
     const newScore = score.slice(0);
 
     while (isPickPossible(deal.board, player.minPick, player.maxPick, deal.endPosition)) {
-        deal.board[player.Number] += deal.board[deal.endPosition];
+        newScore[player.number] += deal.board[deal.endPosition];
         deal.board[deal.endPosition] = 0;
         deal.endPosition -= 1;
     }
@@ -49,7 +49,7 @@ export function pick(player, board, position, score) {
 
 export function willStarvePlayer(player, board, position) {
     //  Fake pick to simulate next turn
-    const newResult = pick(player, board, position, [2]);
+    const newResult = pick(player, board, position, [0, 0]);
     return isStarving(newResult.board, player.minPick, player.maxPick);
 }
 
@@ -80,6 +80,6 @@ export function canPlayerPlayPosition(player, board, position) {
     return movePossible;
 }
 
-export function InitBoardTest(b) {
+export function initBoardTest(b) {
     return [b[6], b[7], b[8], b[9], b[10], b[11], b[5], b[4], b[3], b[2], b[1], b[0]];
 }

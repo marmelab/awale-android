@@ -5,6 +5,8 @@ import {
     isPickPossible,
     pick,
     willStarvePlayer,
+    canPlayerPlayPosition,
+    initBoardTest,
     canFeedPlayer,
 } from './Board';
 
@@ -79,5 +81,89 @@ describe('Board', () => {
 
         const playerOne = createPlayer(0);
         expect(canFeedPlayer(playerOne, board)).toEqual(false);
+    });
+
+    it('Deal position for new board should return four', () => {
+        const board = create();
+        const deal = dealPosition(board, 0);
+
+        const expectedBoard = initBoardTest([
+            4, 4, 4, 4, 4, 4,
+            0, 5, 5, 5, 5, 4,
+        ]);
+
+        expect(deal.board).toEqual(expectedBoard);
+        expect(deal.endPosition).toEqual(4);
+    });
+
+    it('Deal position for empty side board should return nine', () => {
+        const board = initBoardTest([
+            0, 0, 0, 0, 0, 0,
+            4, 4, 4, 4, 4, 4,
+        ]);
+        const deal = dealPosition(board, 5);
+
+        const expectedBoard = initBoardTest([
+            0, 0, 1, 1, 1, 1,
+            4, 4, 4, 4, 4, 0,
+        ]);
+
+        expect(deal.board).toEqual(expectedBoard);
+        expect(deal.endPosition).toEqual(9);
+    });
+
+    it('Deal position for 13 pebble board should return seven', () => {
+        const board = initBoardTest([
+            0, 0, 0, 0, 0, 0,
+            4, 4, 4, 4, 14, 4,
+        ]);
+        const deal = dealPosition(board, 4);
+
+        const expectedBoard = initBoardTest([
+            1, 1, 1, 1, 2, 2,
+            5, 5, 5, 5, 0, 6,
+        ]);
+
+        expect(deal.board).toEqual(expectedBoard);
+        expect(deal.endPosition).toEqual(7);
+    });
+
+    it('Pick for new board should return empty score', () => {
+        const board = create();
+        const playerOne = createPlayer(0);
+        const newResult = pick(playerOne, board, 6, [0, 0]);
+        expect(newResult.score).toEqual([0, 0]);
+    });
+
+    it('Pick for empty side should return empty score', () => {
+        const board = initBoardTest([
+            0, 0, 0, 0, 0, 0,
+            4, 4, 4, 4, 4, 4,
+        ]);
+        const playerOne = createPlayer(0);
+        const newResult = pick(playerOne, board, 6, [0, 0]);
+        expect(newResult.score).toEqual([0, 0]);
+    });
+
+    it('Pick for position with empty side should return 7 score', () => {
+        const board = initBoardTest([
+            5, 4, 1, 2, 1, 0,
+            4, 4, 4, 4, 4, 4,
+        ]);
+        const playerOne = createPlayer(0);
+        const newResult = pick(playerOne, board, 5, [0, 0]);
+        expect(newResult.score).toEqual([7, 0]);
+    });
+
+    it('Can player play position for new board should return true', () => {
+        const board = create();
+        const playerOne = createPlayer(0);
+        expect(canPlayerPlayPosition(playerOne, board, 0)).toEqual(true);
+    });
+
+    it('Can player play position for new board should return true', () => {
+        const board = create();
+        const playerOne = createPlayer(0);
+        expect(canPlayerPlayPosition(playerOne, board, 99)).toEqual(false);
     });
 });
