@@ -1,10 +1,4 @@
-import { AppRegistry, Text } from 'react-native';
-import React from 'react';
-
-const App = () => (
-    <Text>oui</Text>
- );
-
-export default App;
+import { AppRegistry } from 'react-native';
+import App from './src/App';
 
 AppRegistry.registerComponent('awaleAndroid', () => App);
