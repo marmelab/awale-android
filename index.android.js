@@ -1,7 +1,7 @@
 import { AppRegistry, Text } from 'react-native';
-import React, { Component } from 'react';
+import React from 'react';
 
-class App extends Component {
+class App extends React.PureComponent {
     render() {
         return (
             <Text>oui</Text>
