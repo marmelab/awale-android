@@ -24,6 +24,10 @@ const styles = StyleSheet.create({
 });
 
 export default class Board extends Component {
+    static propTypes = {
+        board: PropTypes.arrayOf(React.PropTypes.number).isRequired,
+    }
+
     render() {
         const size = this.props.board.length;
         const halfSize = size / 2;
@@ -42,7 +46,3 @@ export default class Board extends Component {
         );
     }
 }
-
-Board.propTypes = {
-    board: PropTypes.arrayOf(React.PropTypes.number).isRequired,
-};

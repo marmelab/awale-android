@@ -6,8 +6,12 @@ export default class Welcome extends Component {
         navigator: PropTypes.instanceOf(Navigator).isRequired,
     }
 
-    startPlaying(playAgainstComputer) {
-        this.props.navigator.replace({ id: 'Play', againstComputer: playAgainstComputer });
+    startPlayingWithIA = () => {
+        this.props.navigator.replace({ id: 'Play', againstComputer: true });
+    }
+
+    startPlayingWithPlayer = () => {
+        this.props.navigator.replace({ id: 'Play', againstComputer: false });
     }
 
     render() {
@@ -18,10 +22,10 @@ export default class Welcome extends Component {
                 </View>
                 <View >
                     <View style={{ marginBottom: 30 }}>
-                        <Button title="Play against computer" onPress={() => this.startPlaying(true)} />
+                        <Button title="Play against computer" onPress={this.startPlayingWithIA} />
                     </View>
                     <View style={{ marginBottom: 30 }}>
-                        <Button title="Play against another player" onPress={() => this.startPlaying(false)} />
+                        <Button title="Play against another player" onPress={this.startPlayingWithPlayer} />
                     </View>
                 </View>
             </View>
