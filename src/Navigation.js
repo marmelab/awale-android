@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navigator, View } from 'react-native';
-import Welcome from './app/scenes/Welcome';
-import Play from './app/scenes/Play';
+import Welcome from './navigation/Welcome';
+import Play from './navigation/Play';
 
 export default () => {
     const renderNavigationScene = (route, navigator) => {
@@ -9,7 +9,7 @@ export default () => {
         case 'Welcome':
             return <Welcome navigator={navigator} title="Welcome" />;
         case 'Play':
-            return <Play navigator={navigator} title="Play" />;
+            return <Play navigator={navigator} title="Play" againstComputer={route.againstComputer} />;
         default:
             return <View />;
         }
