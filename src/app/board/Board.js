@@ -12,6 +12,7 @@ const styles = StyleSheet.create({
         height: 130,
         padding: 10,
         width: 340,
+        marginTop: 50,
     },
 });
 

@@ -3,9 +3,45 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
     true: {
-        color: 'red',
+        color: 'white',
     },
     false: {
+        color: 'white',
+        opacity: 0.5,
+    },
+    circle: {
+        width: 100,
+        height: 100,
+        borderRadius: 100 / 2,
+    },
+    circleInside: {
+        width: 90,
+        height: 90,
+        borderRadius: 90 / 2,
+        backgroundColor: '#1abc9c',
+        marginTop: 5,
+        marginLeft: 5,
+    },
+    score: {
+        textAlign: 'center',
+        marginTop: 20,
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
+    turn: {
+        color: 'white',
+        fontSize: 20,
+        height: 40,
+        width: 150,
+        textAlign: 'center',
+        padding: 5,
+        borderRadius: 10,
+        marginTop: 30,
+    },
+    trait: {
+        height: 2,
+        width: 90,
+        marginTop: 50,
     },
 });
 
@@ -13,27 +49,39 @@ export default class ScoreCircle extends Component {
     static propTypes = {
         score: PropTypes.number.isRequired,
         highlight: PropTypes.bool,
-        orientation: PropTypes.oneOf(['left', 'right']),
+        flexDirection: PropTypes.oneOf(['row', 'row-reverse']),
+        colorSyle: PropTypes.string,
     }
 
     static defaultProps = {
         highlight: false,
-        orientation: 'left',
+        flexDirection: 'row',
+        colorSyle: 'white',
     }
+
+    containerStyle = direction => ({
+        flexDirection: direction,
+        justifyContent: 'space-between',
+    })
 
     render() {
         return (
-            <View>
-                {(() => {
-                    switch (this.props.orientation) {
-                    case 'left':
-                        return <Text style={styles[this.props.highlight]}>Score : {this.props.score}</Text>;
-                    case 'right':
-                        return <Text style={styles[this.props.highlight]}>Score : {this.props.score}</Text>;
-                    default:
-                        return <Text style={styles[this.props.highlight]}>Score : {this.props.score}</Text>;
-                    }
-                })()}
+            <View style={this.containerStyle(this.props.flexDirection)}>
+                <View style={[styles.circle, { backgroundColor: this.props.colorSyle }]}>
+                    <View style={styles.circleInside}>
+                        <Text style={[styles.score, styles[this.props.highlight]]}>{this.props.score}</Text>
+                    </View>
+                </View>
+
+                {this.props.highlight ?
+                    <View style={[styles.trait, { backgroundColor: this.props.colorSyle }]} /> :
+                    <View />
+                }
+
+                {this.props.highlight ?
+                    <Text style={[styles.turn, { backgroundColor: this.props.colorSyle }]}>Your turn</Text> :
+                    <View />
+                }
             </View>
         );
     }
