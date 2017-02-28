@@ -1,7 +1,7 @@
 import React, { PropTypes, Component } from 'react';
 import { View, Navigator, Button } from 'react-native';
 
-import Board from '../awale/board/Board';
+import Board from '../app/board/Board';
 
 export default class Play extends Component {
     static propTypes = {

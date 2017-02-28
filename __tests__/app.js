@@ -2,7 +2,7 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import { Navigator } from 'react-native';
 import App from '../src/App';
-import Board from '../src/awale/board/Board';
+import Board from '../src/app/board/Board';
 import Welcome from '../src/navigation/Welcome';
 import Play from '../src/navigation/Play';
 
