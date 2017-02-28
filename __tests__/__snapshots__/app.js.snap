@@ -500,6 +500,43 @@ exports[`renders the Board component 1`] = `
 </View>
 `;
 
+exports[`renders the PitButton component 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "borderRadius": 20,
+      "height": 40,
+      "marginLeft": 10,
+      "marginTop": 10,
+      "textAlign": "center",
+      "textAlignVertical": "center",
+      "width": 40,
+    }
+  }
+>
+  4
+</Text>
+`;
+
+exports[`renders the PitButton component 2`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={Object {}}
+  >
+    Score : 
+    20
+  </Text>
+</View>
+`;
+
 exports[`renders the Play component 1`] = `
 <View>
   <View>

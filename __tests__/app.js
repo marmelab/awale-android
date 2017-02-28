@@ -3,6 +3,8 @@ import renderer from 'react-test-renderer';
 import { Navigator } from 'react-native';
 import App from '../src/App';
 import Board from '../src/app/board/Board';
+import PitButton from '../src/app/board/PitButton';
+import ScoreCircle from '../src/app/score/ScoreCircle';
 import Welcome from '../src/navigation/Welcome';
 import Play from '../src/navigation/Play';
 import { create as createGame } from '../src/awale/game/Game';
@@ -49,6 +51,28 @@ it('renders the Play component', () => {
 
     const tree = renderer.create(
         <Play navigator={navigator} againstComputer />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it('renders the PitButton component', () => {
+    const pickPebble = () => {};
+
+    const tree = renderer.create(
+        <PitButton
+            onPress={pickPebble}
+            pitValue={4}
+            pitIndex={0}
+        />
+    ).toJSON();
+    expect(tree).toMatchSnapshot();
+});
+
+it('renders the PitButton component', () => {
+    const tree = renderer.create(
+        <ScoreCircle
+            score={20}
+        />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });
