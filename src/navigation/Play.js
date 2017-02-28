@@ -9,6 +9,7 @@ import {
     create as createGame,
     playTurn,
     getCurrentPlayer,
+    checkWinner,
 } from '../awale/game/Game';
 import { canPlayerPlayPosition } from '../awale/board/Board';
 
@@ -37,9 +38,9 @@ export default class Play extends Component {
     }
 
     showGameStatus = (gameState) => {
-        const message = `Player ${gameState} wins !`;
+        const message = `Player ${gameState + 1} wins !`;
         Alert.alert(
-            'Game over',
+            'Game winner',
             message,
             [
                 {
@@ -66,9 +67,10 @@ export default class Play extends Component {
             return;
         }
 
-        const nextGame = playTurn(this.state.game, position);
+        let nextGame = playTurn(this.state.game, position);
         this.setState({ game: nextGame });
 
+        nextGame = checkWinner(nextGame);
         if (nextGame.gameState !== GAME_CONTINUE) {
             this.showGameStatus(nextGame.gameState);
         }
