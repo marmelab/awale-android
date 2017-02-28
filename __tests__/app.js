@@ -5,6 +5,8 @@ import App from '../src/App';
 import Board from '../src/app/board/Board';
 import Welcome from '../src/navigation/Welcome';
 import Play from '../src/navigation/Play';
+import { create as createGame } from '../src/awale/game/Game';
+import createPlayer from '../src/awale/player/Player';
 
 it('renders the App component', () => {
     const tree = renderer.create(
@@ -14,9 +16,15 @@ it('renders the App component', () => {
 });
 
 it('renders the Board component', () => {
-    const cells = Array(12).fill(4);
+    const game = createGame([createPlayer(0), createPlayer(1)]);
+    const pickPebble = () => {};
+
     const tree = renderer.create(
-        <Board board={cells} />
+        <Board
+            board={game.board}
+            currentIndexPlayer={game.currentIndexPlayer}
+            pickPebble={pickPebble}
+        />
     ).toJSON();
     expect(tree).toMatchSnapshot();
 });
