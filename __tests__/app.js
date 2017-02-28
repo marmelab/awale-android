@@ -68,7 +68,7 @@ it('renders the PitButton component', () => {
     expect(tree).toMatchSnapshot();
 });
 
-it('renders the PitButton component', () => {
+it('renders the ScoreCircle component', () => {
     const tree = renderer.create(
         <ScoreCircle
             score={20}
