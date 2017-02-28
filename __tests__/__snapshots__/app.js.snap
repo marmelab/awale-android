@@ -559,8 +559,26 @@ exports[`renders the PitButton component 1`] = `
 `;
 
 exports[`renders the Play component 1`] = `
-<View>
-  <View>
+<View
+  style={
+    Object {
+      "backgroundColor": "#1abc9c",
+      "flex": 1,
+      "paddingLeft": 10,
+      "paddingRight": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginBottom": 5,
+      }
+    }
+  >
     <View
       accessibilityComponentType="button"
       accessibilityLabel={undefined}
@@ -614,7 +632,13 @@ exports[`renders the Play component 1`] = `
       </View>
     </View>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
     <View>
       <Text
         accessible={true}
@@ -627,7 +651,13 @@ exports[`renders the Play component 1`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 4,
+      }
+    }
+  >
     <View
       style={
         Object {
@@ -907,7 +937,13 @@ exports[`renders the Play component 1`] = `
       </Text>
     </View>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
     <View>
       <Text
         accessible={true}
