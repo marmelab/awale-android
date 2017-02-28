@@ -65,12 +65,12 @@ export function canFeedPlayer(player, board) {
 }
 
 export function canPlayerPlayPosition(player, board, position) {
-    const isPlayerCanMove = (player.minPosition <= position) && (position < player.maxPosition);
-    if (!isPlayerCanMove) {
+    const canPlayerMove = (player.minPosition <= position) && (position < player.maxPosition);
+    if (!canPlayerMove) {
         return false;
     }
 
-    const movePossible = isPlayerCanMove && (board[position] !== 0);
+    const movePossible = canPlayerMove && (board[position] !== 0);
     if (isStarving(board, player.minPick, player.maxPick)) {
         const isStarv = willStarvePlayer(player, board, position);
         const canFeed = canFeedPlayer(player, board);
