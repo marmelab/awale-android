@@ -13,6 +13,8 @@ import {
 } from '../awale/game/Game';
 import { canPlayerPlayPosition } from '../awale/board/Board';
 
+import config from '../../config';
+
 export default class Play extends Component {
     static propTypes = {
         navigator: PropTypes.instanceOf(Navigator).isRequired,
@@ -95,7 +97,7 @@ export default class Play extends Component {
     }
 
     fetchColumn = (game) => {
-        return fetch('http://10.0.2.2:2000/moveIA', {
+        return fetch(config.apiUrl, {
             method: 'POST',
             body: JSON.stringify({ Score: game.score, Board: game.board }),
         })
