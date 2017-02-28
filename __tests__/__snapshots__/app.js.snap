@@ -523,20 +523,6 @@ exports[`renders the PitButton component 1`] = `
 </Text>
 `;
 
-exports[`renders the PitButton component 2`] = `
-<View>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={Object {}}
-  >
-    Score : 
-    20
-  </Text>
-</View>
-`;
-
 exports[`renders the Play component 1`] = `
 <View>
   <View>
@@ -903,6 +889,20 @@ exports[`renders the Play component 1`] = `
       </Text>
     </View>
   </View>
+</View>
+`;
+
+exports[`renders the ScoreCircle component 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={Object {}}
+  >
+    Score : 
+    20
+  </Text>
 </View>
 `;
 
