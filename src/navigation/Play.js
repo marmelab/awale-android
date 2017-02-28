@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { View, Navigator, Button, Text } from 'react-native';
+import { View, Navigator, Button } from 'react-native';
 
 import Board from '../app/board/Board';
 import ScoreCircle from '../app/score/ScoreCircle';
