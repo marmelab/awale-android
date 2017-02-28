@@ -3,7 +3,6 @@ import {
     playTurn,
 } from './Game';
 
-import { PIT_COUNT } from '../constants/Constants';
 import createPlayer from '../player/Player';
 import { initBoardTest } from '../board/Board';
 
@@ -17,6 +16,7 @@ describe('Game', () => {
         const game = create([createPlayer(0), createPlayer(1)]);
         const expectedGame = create([createPlayer(0), createPlayer(1)]);
 
+        expectedGame.currentIndexPlayer = 1 - expectedGame.currentIndexPlayer;
         expectedGame.board = initBoardTest([
             4, 4, 4, 4, 4, 4,
             4, 0, 5, 5, 5, 5,
