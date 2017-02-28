@@ -81,17 +81,46 @@ exports[`renders the App component 1`] = `
         ]
       }
     >
-      <View>
-        <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#1abc9c",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }
+        >
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#ecf0f1",
+                "fontSize": 80,
+                "marginTop": 16,
+              }
+            }
           >
             Awale
           </Text>
         </View>
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 2,
+            }
+          }
+        >
           <View
             style={
               Object {
@@ -143,6 +172,9 @@ exports[`renders the App component 1`] = `
                         "fontSize": 18,
                         "padding": 8,
                         "textAlign": "center",
+                      },
+                      Object {
+                        "color": "#138a72",
                       },
                     ]
                   }
@@ -203,6 +235,9 @@ exports[`renders the App component 1`] = `
                         "fontSize": 18,
                         "padding": 8,
                         "textAlign": "center",
+                      },
+                      Object {
+                        "color": "#138a72",
                       },
                     ]
                   }
@@ -907,17 +942,46 @@ exports[`renders the ScoreCircle component 1`] = `
 `;
 
 exports[`renders the Welcome component 1`] = `
-<View>
-  <View>
+<View
+  style={
+    Object {
+      "backgroundColor": "#1abc9c",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
+  >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ecf0f1",
+          "fontSize": 80,
+          "marginTop": 16,
+        }
+      }
     >
       Awale
     </Text>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
     <View
       style={
         Object {
@@ -969,6 +1033,9 @@ exports[`renders the Welcome component 1`] = `
                   "fontSize": 18,
                   "padding": 8,
                   "textAlign": "center",
+                },
+                Object {
+                  "color": "#138a72",
                 },
               ]
             }
@@ -1029,6 +1096,9 @@ exports[`renders the Welcome component 1`] = `
                   "fontSize": 18,
                   "padding": 8,
                   "textAlign": "center",
+                },
+                Object {
+                  "color": "#138a72",
                 },
               ]
             }
