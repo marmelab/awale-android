@@ -6,11 +6,12 @@ const styles = StyleSheet.create({
     board: {
         flexDirection: 'row',
         flexWrap: 'wrap',
-        backgroundColor: 'steelblue',
+        backgroundColor: '#f39c12',
         justifyContent: 'space-around',
-        height: 150,
-        padding: 20,
-        width: 350,
+        borderRadius: 10,
+        height: 130,
+        padding: 10,
+        width: 340,
     },
 });
 

@@ -133,7 +133,7 @@ export default class Play extends Component {
         return (
             <View style={styles.view}>
                 <View style={styles.header}>
-                    <Button onPress={this.handleGoHomeClick} title="Back to home" />
+                    <Button onPress={this.handleGoHomeClick} title="Back to home" color="#138a72" />
                 </View>
 
                 <View style={styles.scoreContainer}>
