@@ -137,7 +137,13 @@ export default class Play extends Component {
                 </View>
 
                 <View style={styles.scoreContainer}>
-                    <ScoreCircle score={game.score[1]} highlight={!highlightPlayerOne} flexDirection="row-reverse" colorSyle="#34495e" />
+                    <ScoreCircle
+                        score={game.score[1]}
+                        highlight={!highlightPlayerOne}
+                        flexDirection="row-reverse"
+                        colorSyle="#34495e"
+                        text="Their turn"
+                    />
                 </View>
 
                 <View style={styles.boardContainer}>
@@ -150,7 +156,12 @@ export default class Play extends Component {
                 </View>
 
                 <View style={styles.scoreContainer}>
-                    <ScoreCircle score={game.score[0]} highlight={highlightPlayerOne} flexDirection="row" colorSyle="#9b59b6" />
+                    <ScoreCircle
+                        score={game.score[0]}
+                        highlight={highlightPlayerOne}
+                        flexDirection="row"
+                        colorSyle="#9b59b6"
+                    />
                 </View>
 
             </View>
