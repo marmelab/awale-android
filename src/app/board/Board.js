@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
+import PitButton from './PitButton';
 
 const styles = StyleSheet.create({
     board: {
@@ -11,36 +12,44 @@ const styles = StyleSheet.create({
         padding: 20,
         width: 350,
     },
-    pit: {
-        borderRadius: 20,
-        height: 40,
-        width: 40,
-        marginLeft: 10,
-        marginTop: 10,
-        backgroundColor: 'red',
-        textAlign: 'center',
-        textAlignVertical: 'center',
-    },
 });
 
 export default class Board extends Component {
     static propTypes = {
         board: PropTypes.arrayOf(React.PropTypes.number).isRequired,
+        pickPebble: PropTypes.func.isRequired,
+        currentIndexPlayer: PropTypes.number.isRequired,
+    }
+
+    pickPebble = (position) => {
+        this.props.pickPebble(position);
     }
 
     render() {
         const size = this.props.board.length;
         const halfSize = size / 2;
-        const topBoard = this.props.board.slice(0, halfSize).reverse();
-        const bottomBoard = this.props.board.slice(halfSize, size);
+        const topBoard = this.props.board.slice(halfSize, size).reverse();
+        const bottomBoard = this.props.board.slice(0, halfSize);
 
         return (
             <View style={styles.board}>
-                {topBoard.map((pit, x) =>
-                    <Text style={styles.pit} key={`topBoard-${x}`}>{pit}</Text>
+                {topBoard.map((pit, i) =>
+                    <PitButton
+                        onPress={this.pickPebble}
+                        pitValue={pit}
+                        pitIndex={size - 1 - i}
+                        enabled={this.props.currentIndexPlayer === 1}
+                        key={`topBoard-${i}`}
+                    />
                 )}
-                {bottomBoard.map((pit, x) =>
-                    <Text style={styles.pit} key={`bottomBoard-${x}`}>{pit}</Text>
+                {bottomBoard.map((pit, i) =>
+                    <PitButton
+                        onPress={this.pickPebble}
+                        pitValue={pit}
+                        pitIndex={i}
+                        enabled={this.props.currentIndexPlayer === 0}
+                        key={`bottomBoard-${i}`}
+                    />
                 )}
             </View>
         );

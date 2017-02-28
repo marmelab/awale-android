@@ -2,6 +2,11 @@ import React, { PropTypes, Component } from 'react';
 import { View, Navigator, Button } from 'react-native';
 
 import Board from '../app/board/Board';
+import createPlayer from '../awale/player/Player';
+import { create as createGame,
+         playTurn,
+         getCurrentPlayer,
+} from '../awale/game/Game';
 
 export default class Play extends Component {
     static propTypes = {
@@ -13,16 +18,25 @@ export default class Play extends Component {
         super(props);
 
         this.state = {
-            cells: Array(12).fill(4),
+            game: this.getGameModel(),
         };
+    }
+
+    getGameModel() {
+        return createGame([createPlayer(0), createPlayer(1, !this.props.againstComputer)]);
     }
 
     handleGoHomeClick = () => {
         this.props.navigator.replace({ id: 'Welcome' });
     }
 
+    pickPebble = (position) => {
+        const nextGame = playTurn(this.state.game, position);
+        this.setState({ game: nextGame });
+    }
+
     render() {
-        const { cells } = this.state;
+        const { game } = this.state;
 
         return (
             <View>
@@ -31,7 +45,11 @@ export default class Play extends Component {
                 </View>
 
                 <View>
-                    <Board board={cells} />
+                    <Board
+                        board={game.board}
+                        currentIndexPlayer={game.currentIndexPlayer}
+                        pickPebble={this.pickPebble}
+                    />
                 </View>
             </View>
         );
