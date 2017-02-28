@@ -1,6 +1,7 @@
 import React, { PropTypes, Component } from 'react';
-import { View, Navigator, Button } from 'react-native';
+import { View, Navigator, Button, Alert } from 'react-native';
 
+import { GAME_CONTINUE } from '../awale/constants/Constants';
 import Board from '../app/board/Board';
 import ScoreCircle from '../app/score/ScoreCircle';
 import createPlayer from '../awale/player/Player';
@@ -20,9 +21,7 @@ export default class Play extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            game: this.getGameModel(),
-        };
+        this.state = { game: this.getGameModel() };
     }
 
     getGameModel() {
@@ -31,6 +30,33 @@ export default class Play extends Component {
 
     handleGoHomeClick = () => {
         this.props.navigator.replace({ id: 'Welcome' });
+    }
+
+    handlePlayAgainClick = () => {
+        this.setState({ game: this.getGameModel() });
+    }
+
+    showGameStatus = (gameState) => {
+        const message = `Player ${gameState} wins !`;
+        Alert.alert(
+            'Game over',
+            message,
+            [
+                {
+                    text: 'Back to home ',
+                    style: 'cancel',
+                    onPress: this.handleGoHomeClick,
+                },
+                {
+                    text: 'Play again',
+                    style: 'default',
+                    onPress: this.handlePlayAgainClick,
+                },
+            ],
+            {
+                cancelable: false,
+            },
+         );
     }
 
     pickPebble = (position) => {
@@ -42,6 +68,10 @@ export default class Play extends Component {
 
         const nextGame = playTurn(this.state.game, position);
         this.setState({ game: nextGame });
+
+        if (nextGame.gameState !== GAME_CONTINUE) {
+            this.showGameStatus(nextGame.gameState);
+        }
     }
 
     render() {

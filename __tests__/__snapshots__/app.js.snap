@@ -557,6 +557,19 @@ exports[`renders the Play component 1`] = `
     </View>
   </View>
   <View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={Object {}}
+      >
+        Score : 
+        0
+      </Text>
+    </View>
+  </View>
+  <View>
     <View
       style={
         Object {
@@ -833,6 +846,23 @@ exports[`renders the Play component 1`] = `
         }
       >
         4
+      </Text>
+    </View>
+  </View>
+  <View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Score : 
+        0
       </Text>
     </View>
   </View>
