@@ -7,7 +7,9 @@ import createPlayer from '../awale/player/Player';
 import {
     create as createGame,
     playTurn,
+    getCurrentPlayer,
 } from '../awale/game/Game';
+import { canPlayerPlayPosition } from '../awale/board/Board';
 
 export default class Play extends Component {
     static propTypes = {
@@ -32,6 +34,12 @@ export default class Play extends Component {
     }
 
     pickPebble = (position) => {
+        const player = getCurrentPlayer(this.state.game);
+        const canPlay = canPlayerPlayPosition(player, this.state.game.board, position);
+        if (!canPlay) {
+            return;
+        }
+
         const nextGame = playTurn(this.state.game, position);
         this.setState({ game: nextGame });
     }
