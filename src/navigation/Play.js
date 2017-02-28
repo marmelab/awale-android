@@ -1,11 +1,12 @@
 import React, { PropTypes, Component } from 'react';
-import { View, Navigator, Button } from 'react-native';
+import { View, Navigator, Button, Text } from 'react-native';
 
 import Board from '../app/board/Board';
+import ScoreCircle from '../app/score/ScoreCircle';
 import createPlayer from '../awale/player/Player';
-import { create as createGame,
-         playTurn,
-         getCurrentPlayer,
+import {
+    create as createGame,
+    playTurn,
 } from '../awale/game/Game';
 
 export default class Play extends Component {
@@ -37,11 +38,16 @@ export default class Play extends Component {
 
     render() {
         const { game } = this.state;
+        const highlightPlayerOne = (game.currentIndexPlayer === 0);
 
         return (
             <View>
                 <View>
                     <Button onPress={this.handleGoHomeClick} title="Back to home" />
+                </View>
+
+                <View>
+                    <ScoreCircle score={game.score[1]} highlight={!highlightPlayerOne} orientation="left" />
                 </View>
 
                 <View>
@@ -51,6 +57,11 @@ export default class Play extends Component {
                         pickPebble={this.pickPebble}
                     />
                 </View>
+
+                <View>
+                    <ScoreCircle score={game.score[0]} highlight={highlightPlayerOne} orientation="right" />
+                </View>
+
             </View>
         );
     }
