@@ -73,7 +73,32 @@ export default class Play extends Component {
         nextGame = checkWinner(nextGame);
         if (nextGame.gameState !== GAME_CONTINUE) {
             this.showGameStatus(nextGame.gameState);
+        } else {
+            this.checkComputerTurn(nextGame);
         }
+    }
+
+    checkComputerTurn = (game) => {
+        const player = getCurrentPlayer(game);
+        if (player.isHuman || !this.props.againstComputer) {
+            return;
+        }
+
+        this.fetchColumn(game).then((bestPosition) => {
+            this.pickPebble(bestPosition);
+        });
+    }
+
+    fetchColumn = (game) => {
+        return fetch('http://10.0.2.2:2000/moveIA', {
+            method: 'POST',
+            body: JSON.stringify({ Score: game.score, Board: game.board }),
+        })
+        .then(response => response.text())
+        .then(parseInt)
+        .catch((e) => {
+            console.warn(e);
+        });
     }
 
     render() {
