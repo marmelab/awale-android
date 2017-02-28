@@ -26,20 +26,6 @@ export function getCurrentPlayer(game) {
     return game.players[game.currentIndexPlayer];
 }
 
-export function convertPlayerPosition(position, indexPlayer) {
-    if (indexPlayer === 1) {
-        return PIT_COUNT - position;
-    }
-    return position - 1;
-}
-
-export function convertPositionToBoardPosition(position, indexPlayer) {
-    if (indexPlayer === 1) {
-        return PIT_COUNT - position;
-    }
-    return position + 1;
-}
-
 export function switchPlayer(game) {
     const newGame = Object.assign({}, game);
     newGame.currentIndexPlayer = 1 - game.currentIndexPlayer;
@@ -54,13 +40,13 @@ export function playTurn(game, position) {
     if (isStarving) {
         const deal = dealPosition(newGame.board, position);
         newGame.board = deal.board;
-        return game;
+        return switchPlayer(newGame);
     }
 
-    const newResult = pick(player, newGame.board, position, game.score);
+    const newResult = pick(player, newGame.board, position, newGame.score);
     newGame.board = newResult.board;
     newGame.score = newResult.score;
-    return newGame;
+    return switchPlayer(newGame);
 }
 
 export function checkWinner(game) {

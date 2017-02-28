@@ -238,16 +238,21 @@ exports[`renders the Board component 1`] = `
     allowFontScaling={true}
     ellipsizeMode="tail"
     style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
     }
   >
     4
@@ -256,6 +261,127 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
+    }
+  >
+    4
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
+    }
+  >
+    4
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
+    }
+  >
+    4
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
+    }
+  >
+    4
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Array [
+        Object {
+          "backgroundColor": "red",
+          "borderRadius": 20,
+          "height": 40,
+          "marginLeft": 10,
+          "marginTop": 10,
+          "textAlign": "center",
+          "textAlignVertical": "center",
+          "width": 40,
+        },
+        Object {
+          "backgroundColor": "orange",
+        },
+      ]
+    }
+  >
+    4
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -275,6 +401,7 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -294,6 +421,7 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -313,6 +441,7 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -332,6 +461,7 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -351,101 +481,7 @@ exports[`renders the Board component 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
-    }
-  >
-    4
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
-    }
-  >
-    4
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
-    }
-  >
-    4
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
-    }
-  >
-    4
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "backgroundColor": "red",
-        "borderRadius": 20,
-        "height": 40,
-        "marginLeft": 10,
-        "marginTop": 10,
-        "textAlign": "center",
-        "textAlignVertical": "center",
-        "width": 40,
-      }
-    }
-  >
-    4
-  </Text>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
+    onPress={[Function]}
     style={
       Object {
         "backgroundColor": "red",
@@ -462,6 +498,29 @@ exports[`renders the Board component 1`] = `
     4
   </Text>
 </View>
+`;
+
+exports[`renders the PitButton component 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  onPress={[Function]}
+  style={
+    Object {
+      "backgroundColor": "red",
+      "borderRadius": 20,
+      "height": 40,
+      "marginLeft": 10,
+      "marginTop": 10,
+      "textAlign": "center",
+      "textAlignVertical": "center",
+      "width": 40,
+    }
+  }
+>
+  4
+</Text>
 `;
 
 exports[`renders the Play component 1`] = `
@@ -521,6 +580,19 @@ exports[`renders the Play component 1`] = `
     </View>
   </View>
   <View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={Object {}}
+      >
+        Score : 
+        0
+      </Text>
+    </View>
+  </View>
+  <View>
     <View
       style={
         Object {
@@ -539,16 +611,21 @@ exports[`renders the Play component 1`] = `
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
         }
       >
         4
@@ -557,6 +634,127 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "backgroundColor": "red",
+              "borderRadius": 20,
+              "height": 40,
+              "marginLeft": 10,
+              "marginTop": 10,
+              "textAlign": "center",
+              "textAlignVertical": "center",
+              "width": 40,
+            },
+            Object {
+              "backgroundColor": "orange",
+            },
+          ]
+        }
+      >
+        4
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -576,6 +774,7 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -595,6 +794,7 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -614,6 +814,7 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -633,6 +834,7 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -652,101 +854,7 @@ exports[`renders the Play component 1`] = `
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
-        }
-      >
-        4
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
-        }
-      >
-        4
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
-        }
-      >
-        4
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
-        }
-      >
-        4
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "backgroundColor": "red",
-            "borderRadius": 20,
-            "height": 40,
-            "marginLeft": 10,
-            "marginTop": 10,
-            "textAlign": "center",
-            "textAlignVertical": "center",
-            "width": 40,
-          }
-        }
-      >
-        4
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "backgroundColor": "red",
@@ -764,6 +872,37 @@ exports[`renders the Play component 1`] = `
       </Text>
     </View>
   </View>
+  <View>
+    <View>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "red",
+          }
+        }
+      >
+        Score : 
+        0
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders the ScoreCircle component 1`] = `
+<View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={Object {}}
+  >
+    Score : 
+    20
+  </Text>
 </View>
 `;
 
