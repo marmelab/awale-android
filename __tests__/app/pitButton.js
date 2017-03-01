@@ -9,4 +9,10 @@ describe('<PitButton />', () => {
         expect(pitButton.length).toEqual(1);
         expect(pitButton.find(Text).props().children).toEqual(0);
     });
+
+    it('should render One', () => {
+        const pitButton = shallow(<PitButton onPress={() => {}} pitValue={1} pitIndex={0} />);
+        expect(pitButton.length).toEqual(1);
+        expect(pitButton.find(Text).props().children).toEqual(1);
+    });
 });
