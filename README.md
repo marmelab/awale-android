@@ -10,7 +10,7 @@ make start-server
 make run
 ```
 
-Look `config.js` file, you need change url API. If you use Android emulator, use the IP adress 10.0.2.2. You can read more from [here](https://developer.android.com/studio/run/emulator-commandline.html#networkaddresses).
+You need to change the url API in `config.js`. If you use Android emulator, use the IP adress `10.0.2.2`. You can read more from [android documentation](https://developer.android.com/studio/run/emulator-commandline.html#networkaddresses).
 
 ## Player vs IA
 
