@@ -141,7 +141,7 @@ export default class Play extends Component {
                         score={game.score[1]}
                         highlight={!highlightPlayerOne}
                         flexDirection="row-reverse"
-                        colorSyle="#34495e"
+                        colorStyle="#34495e"
                         text="Their turn"
                     />
                 </View>
@@ -160,7 +160,7 @@ export default class Play extends Component {
                         score={game.score[0]}
                         highlight={highlightPlayerOne}
                         flexDirection="row"
-                        colorSyle="#9b59b6"
+                        colorStyle="#9b59b6"
                     />
                 </View>
 

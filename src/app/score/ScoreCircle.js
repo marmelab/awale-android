@@ -50,14 +50,14 @@ export default class ScoreCircle extends Component {
         score: PropTypes.number.isRequired,
         highlight: PropTypes.bool,
         flexDirection: PropTypes.oneOf(['row', 'row-reverse']),
-        colorSyle: PropTypes.string,
+        colorStyle: PropTypes.string,
         text: PropTypes.string,
     }
 
     static defaultProps = {
         highlight: false,
         flexDirection: 'row',
-        colorSyle: 'white',
+        colorStyle: 'white',
         text: 'Your turn',
     }
 
@@ -69,19 +69,19 @@ export default class ScoreCircle extends Component {
     render() {
         return (
             <View style={this.containerStyle(this.props.flexDirection)}>
-                <View style={[styles.circle, { backgroundColor: this.props.colorSyle }]}>
+                <View style={[styles.circle, { backgroundColor: this.props.colorStyle }]}>
                     <View style={styles.circleInside}>
                         <Text style={[styles.score, styles[this.props.highlight]]}>{this.props.score}</Text>
                     </View>
                 </View>
 
                 {this.props.highlight ?
-                    <View style={[styles.trait, { backgroundColor: this.props.colorSyle }]} /> :
+                    <View style={[styles.trait, { backgroundColor: this.props.colorStyle }]} /> :
                     <View />
                 }
 
                 {this.props.highlight ?
-                    <Text style={[styles.turn, { backgroundColor: this.props.colorSyle }]}>{this.props.text}</Text> :
+                    <Text style={[styles.turn, { backgroundColor: this.props.colorStyle }]}>{this.props.text}</Text> :
                     <View />
                 }
             </View>
