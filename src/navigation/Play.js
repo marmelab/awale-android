@@ -34,6 +34,12 @@ const styles = StyleSheet.create({
     scoreContainer: {
         flex: 2,
     },
+    scoreColorTwo: {
+        backgroundColor: '#34495e',
+    },
+    scoreColorOne: {
+        backgroundColor: '#9b59b6',
+    },
 });
 
 export default class Play extends Component {
@@ -141,7 +147,7 @@ export default class Play extends Component {
                         score={game.score[1]}
                         highlight={!highlightPlayerOne}
                         flexDirection="row-reverse"
-                        colorStyle="#34495e"
+                        style={styles.scoreColorTwo}
                         text="Their turn"
                     />
                 </View>
@@ -160,7 +166,7 @@ export default class Play extends Component {
                         score={game.score[0]}
                         highlight={highlightPlayerOne}
                         flexDirection="row"
-                        colorStyle="#9b59b6"
+                        style={styles.scoreColorOne}
                     />
                 </View>
 
