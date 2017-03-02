@@ -19,6 +19,6 @@ You can download this project [Awale on Golang](https://github.com/marmelab/awal
 
 ## Render
 
-Look assets directory.
+Look inside assets directory if you want to see other pictures.
 
 ![Board](https://github.com/marmelab/awale-android/assets/board.png)
