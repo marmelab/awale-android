@@ -15,3 +15,10 @@ Look `config.js` file, you need change url API. If you use Android emulator, use
 ## Player vs IA
 
 You can download this project [Awale on Golang](https://github.com/marmelab/awale-go) et launch `make run-webserver`.
+
+
+## Render
+
+Look assets directory.
+
+!(Board)[https://github.com/marmelab/awale-android/assets.board.png]
