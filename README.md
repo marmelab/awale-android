@@ -21,4 +21,4 @@ You can download this project [Awale on Golang](https://github.com/marmelab/awal
 
 Look inside assets directory if you want to see other pictures.
 
-![Board](https://github.com/marmelab/awale-android/assets/board.png)
+![Board](../master/assets/bard.png?raw=true)
