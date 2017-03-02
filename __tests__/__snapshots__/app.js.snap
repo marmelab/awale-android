@@ -1179,7 +1179,7 @@ exports[`renders the ScoreCircle component 1`] = `
           "width": 100,
         },
         Object {
-          "backgroundColor": "white",
+          "backgroundColor": "#9b59b6",
         },
       ]
     }
