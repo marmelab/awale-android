@@ -81,17 +81,46 @@ exports[`renders the App component 1`] = `
         ]
       }
     >
-      <View>
-        <View>
+      <View
+        style={
+          Object {
+            "backgroundColor": "#1abc9c",
+            "flex": 1,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "flex": 1,
+              "flexDirection": "column",
+              "justifyContent": "center",
+            }
+          }
+        >
           <Text
             accessible={true}
             allowFontScaling={true}
             ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#ecf0f1",
+                "fontSize": 80,
+                "marginTop": 16,
+              }
+            }
           >
             Awale
           </Text>
         </View>
-        <View>
+        <View
+          style={
+            Object {
+              "flex": 2,
+            }
+          }
+        >
           <View
             style={
               Object {
@@ -143,6 +172,9 @@ exports[`renders the App component 1`] = `
                         "fontSize": 18,
                         "padding": 8,
                         "textAlign": "center",
+                      },
+                      Object {
+                        "color": "#138a72",
                       },
                     ]
                   }
@@ -204,6 +236,9 @@ exports[`renders the App component 1`] = `
                         "padding": 8,
                         "textAlign": "center",
                       },
+                      Object {
+                        "color": "#138a72",
+                      },
                     ]
                   }
                 >
@@ -223,13 +258,15 @@ exports[`renders the Board component 1`] = `
 <View
   style={
     Object {
-      "backgroundColor": "steelblue",
+      "backgroundColor": "#f39c12",
+      "borderRadius": 10,
       "flexDirection": "row",
       "flexWrap": "wrap",
-      "height": 150,
+      "height": 130,
       "justifyContent": "space-around",
-      "padding": 20,
-      "width": 350,
+      "marginTop": 50,
+      "padding": 10,
+      "width": 340,
     }
   }
 >
@@ -240,8 +277,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -250,7 +289,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -264,8 +304,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -274,7 +316,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -288,8 +331,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -298,7 +343,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -312,8 +358,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -322,7 +370,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -336,8 +385,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -346,7 +397,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -360,8 +412,10 @@ exports[`renders the Board component 1`] = `
     style={
       Array [
         Object {
-          "backgroundColor": "red",
+          "backgroundColor": "#d35400",
           "borderRadius": 20,
+          "color": "#f1c40f",
+          "fontWeight": "bold",
           "height": 40,
           "marginLeft": 10,
           "marginTop": 10,
@@ -370,7 +424,8 @@ exports[`renders the Board component 1`] = `
           "width": 40,
         },
         Object {
-          "backgroundColor": "orange",
+          "backgroundColor": "#b94a00",
+          "color": "#f39c12",
         },
       ]
     }
@@ -384,8 +439,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -404,8 +461,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -424,8 +483,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -444,8 +505,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -464,8 +527,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -484,8 +549,10 @@ exports[`renders the Board component 1`] = `
     onPress={[Function]}
     style={
       Object {
-        "backgroundColor": "red",
+        "backgroundColor": "#d35400",
         "borderRadius": 20,
+        "color": "#f1c40f",
+        "fontWeight": "bold",
         "height": 40,
         "marginLeft": 10,
         "marginTop": 10,
@@ -508,8 +575,10 @@ exports[`renders the PitButton component 1`] = `
   onPress={[Function]}
   style={
     Object {
-      "backgroundColor": "red",
+      "backgroundColor": "#d35400",
       "borderRadius": 20,
+      "color": "#f1c40f",
+      "fontWeight": "bold",
       "height": 40,
       "marginLeft": 10,
       "marginTop": 10,
@@ -524,8 +593,26 @@ exports[`renders the PitButton component 1`] = `
 `;
 
 exports[`renders the Play component 1`] = `
-<View>
-  <View>
+<View
+  style={
+    Object {
+      "backgroundColor": "#1abc9c",
+      "flex": 1,
+      "paddingLeft": 10,
+      "paddingRight": 10,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+        "marginBottom": 5,
+      }
+    }
+  >
     <View
       accessibilityComponentType="button"
       accessibilityLabel={undefined}
@@ -571,6 +658,9 @@ exports[`renders the Play component 1`] = `
                 "padding": 8,
                 "textAlign": "center",
               },
+              Object {
+                "color": "#138a72",
+              },
             ]
           }
         >
@@ -579,30 +669,93 @@ exports[`renders the Play component 1`] = `
       </View>
     </View>
   </View>
-  <View>
-    <View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={Object {}}
-      >
-        Score : 
-        0
-      </Text>
-    </View>
-  </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
     <View
       style={
         Object {
-          "backgroundColor": "steelblue",
+          "flexDirection": "row-reverse",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 50,
+              "height": 100,
+              "width": 100,
+            },
+            Object {
+              "backgroundColor": "#34495e",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#1abc9c",
+              "borderRadius": 45,
+              "height": 90,
+              "marginLeft": 5,
+              "marginTop": 5,
+              "width": 90,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "marginTop": 20,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "white",
+                  "opacity": 0.5,
+                },
+              ]
+            }
+          >
+            0
+          </Text>
+        </View>
+      </View>
+      <View />
+      <View />
+    </View>
+  </View>
+  <View
+    style={
+      Object {
+        "flex": 4,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#f39c12",
+          "borderRadius": 10,
           "flexDirection": "row",
           "flexWrap": "wrap",
-          "height": 150,
+          "height": 130,
           "justifyContent": "space-around",
-          "padding": 20,
-          "width": 350,
+          "marginTop": 50,
+          "padding": 10,
+          "width": 340,
         }
       }
     >
@@ -613,8 +766,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -623,7 +778,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -637,8 +793,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -647,7 +805,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -661,8 +820,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -671,7 +832,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -685,8 +847,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -695,7 +859,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -709,8 +874,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -719,7 +886,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -733,8 +901,10 @@ exports[`renders the Play component 1`] = `
         style={
           Array [
             Object {
-              "backgroundColor": "red",
+              "backgroundColor": "#d35400",
               "borderRadius": 20,
+              "color": "#f1c40f",
+              "fontWeight": "bold",
               "height": 40,
               "marginLeft": 10,
               "marginTop": 10,
@@ -743,7 +913,8 @@ exports[`renders the Play component 1`] = `
               "width": 40,
             },
             Object {
-              "backgroundColor": "orange",
+              "backgroundColor": "#b94a00",
+              "color": "#f39c12",
             },
           ]
         }
@@ -757,8 +928,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -777,8 +950,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -797,8 +972,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -817,8 +994,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -837,8 +1016,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -857,8 +1038,10 @@ exports[`renders the Play component 1`] = `
         onPress={[Function]}
         style={
           Object {
-            "backgroundColor": "red",
+            "backgroundColor": "#d35400",
             "borderRadius": 20,
+            "color": "#f1c40f",
+            "fontWeight": "bold",
             "height": 40,
             "marginLeft": 10,
             "marginTop": 10,
@@ -872,20 +1055,106 @@ exports[`renders the Play component 1`] = `
       </Text>
     </View>
   </View>
-  <View>
-    <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "borderRadius": 50,
+              "height": 100,
+              "width": 100,
+            },
+            Object {
+              "backgroundColor": "#9b59b6",
+            },
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "backgroundColor": "#1abc9c",
+              "borderRadius": 45,
+              "height": 90,
+              "marginLeft": 5,
+              "marginTop": 5,
+              "width": 90,
+            }
+          }
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "fontSize": 30,
+                  "fontWeight": "bold",
+                  "marginTop": 20,
+                  "textAlign": "center",
+                },
+                Object {
+                  "color": "white",
+                },
+              ]
+            }
+          >
+            0
+          </Text>
+        </View>
+      </View>
+      <View
+        style={
+          Array [
+            Object {
+              "height": 2,
+              "marginTop": 50,
+              "width": 90,
+            },
+            Object {
+              "backgroundColor": "#9b59b6",
+            },
+          ]
+        }
+      />
       <Text
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
         style={
-          Object {
-            "color": "red",
-          }
+          Array [
+            Object {
+              "borderRadius": 10,
+              "color": "white",
+              "fontSize": 20,
+              "height": 40,
+              "marginTop": 30,
+              "padding": 5,
+              "textAlign": "center",
+              "width": 150,
+            },
+            Object {
+              "backgroundColor": "#9b59b6",
+            },
+          ]
         }
       >
-        Score : 
-        0
+        Your turn
       </Text>
     </View>
   </View>
@@ -893,31 +1162,109 @@ exports[`renders the Play component 1`] = `
 `;
 
 exports[`renders the ScoreCircle component 1`] = `
-<View>
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={Object {}}
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+    }
+  }
+>
+  <View
+    style={
+      Array [
+        Object {
+          "borderRadius": 50,
+          "height": 100,
+          "width": 100,
+        },
+        Object {
+          "backgroundColor": "#9b59b6",
+        },
+      ]
+    }
   >
-    Score : 
-    20
-  </Text>
+    <View
+      style={
+        Object {
+          "backgroundColor": "#1abc9c",
+          "borderRadius": 45,
+          "height": 90,
+          "marginLeft": 5,
+          "marginTop": 5,
+          "width": 90,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "fontSize": 30,
+              "fontWeight": "bold",
+              "marginTop": 20,
+              "textAlign": "center",
+            },
+            Object {
+              "color": "white",
+              "opacity": 0.5,
+            },
+          ]
+        }
+      >
+        20
+      </Text>
+    </View>
+  </View>
+  <View />
+  <View />
 </View>
 `;
 
 exports[`renders the Welcome component 1`] = `
-<View>
-  <View>
+<View
+  style={
+    Object {
+      "backgroundColor": "#1abc9c",
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "flexDirection": "column",
+        "justifyContent": "center",
+      }
+    }
+  >
     <Text
       accessible={true}
       allowFontScaling={true}
       ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#ecf0f1",
+          "fontSize": 80,
+          "marginTop": 16,
+        }
+      }
     >
       Awale
     </Text>
   </View>
-  <View>
+  <View
+    style={
+      Object {
+        "flex": 2,
+      }
+    }
+  >
     <View
       style={
         Object {
@@ -969,6 +1316,9 @@ exports[`renders the Welcome component 1`] = `
                   "fontSize": 18,
                   "padding": 8,
                   "textAlign": "center",
+                },
+                Object {
+                  "color": "#138a72",
                 },
               ]
             }
@@ -1029,6 +1379,9 @@ exports[`renders the Welcome component 1`] = `
                   "fontSize": 18,
                   "padding": 8,
                   "textAlign": "center",
+                },
+                Object {
+                  "color": "#138a72",
                 },
               ]
             }

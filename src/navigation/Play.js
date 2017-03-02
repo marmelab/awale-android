@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { View, Navigator, Button, Alert } from 'react-native';
+import { View, Navigator, Button, Alert, StyleSheet } from 'react-native';
 
 import { GAME_CONTINUE } from '../awale/constants/Constants';
 import Board from '../app/board/Board';
@@ -14,6 +14,33 @@ import {
 import { canPlayerPlayPosition } from '../awale/board/Board';
 
 import config from '../../config';
+
+const styles = StyleSheet.create({
+    view: {
+        flex: 1,
+        backgroundColor: '#1abc9c',
+        paddingLeft: 10,
+        paddingRight: 10,
+    },
+    header: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginBottom: 5,
+    },
+    boardContainer: {
+        flex: 4,
+    },
+    scoreContainer: {
+        flex: 2,
+    },
+    scoreColorTwo: {
+        backgroundColor: '#34495e',
+    },
+    scoreColorOne: {
+        backgroundColor: '#9b59b6',
+    },
+});
 
 export default class Play extends Component {
     static propTypes = {
@@ -110,16 +137,22 @@ export default class Play extends Component {
         const highlightPlayerOne = (game.currentIndexPlayer === 0);
 
         return (
-            <View>
-                <View>
-                    <Button onPress={this.handleGoHomeClick} title="Back to home" />
+            <View style={styles.view}>
+                <View style={styles.header}>
+                    <Button onPress={this.handleGoHomeClick} title="Back to home" color="#138a72" />
                 </View>
 
-                <View>
-                    <ScoreCircle score={game.score[1]} highlight={!highlightPlayerOne} orientation="left" />
+                <View style={styles.scoreContainer}>
+                    <ScoreCircle
+                        score={game.score[1]}
+                        highlight={!highlightPlayerOne}
+                        flexDirection="row-reverse"
+                        style={styles.scoreColorTwo}
+                        text="Their turn"
+                    />
                 </View>
 
-                <View>
+                <View style={styles.boardContainer}>
                     <Board
                         board={game.board}
                         currentIndexPlayer={game.currentIndexPlayer}
@@ -128,8 +161,13 @@ export default class Play extends Component {
                     />
                 </View>
 
-                <View>
-                    <ScoreCircle score={game.score[0]} highlight={highlightPlayerOne} orientation="right" />
+                <View style={styles.scoreContainer}>
+                    <ScoreCircle
+                        score={game.score[0]}
+                        highlight={highlightPlayerOne}
+                        flexDirection="row"
+                        style={styles.scoreColorOne}
+                    />
                 </View>
 
             </View>
