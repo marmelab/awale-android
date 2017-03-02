@@ -13,6 +13,8 @@ import {
 } from '../awale/game/Game';
 import { canPlayerPlayPosition } from '../awale/board/Board';
 
+import config from '../../config';
+
 export default class Play extends Component {
     static propTypes = {
         navigator: PropTypes.instanceOf(Navigator).isRequired,
@@ -22,7 +24,10 @@ export default class Play extends Component {
     constructor(props) {
         super(props);
 
-        this.state = { game: this.getGameModel() };
+        this.state = {
+            game: this.getGameModel(),
+            canPlay: true,
+        };
     }
 
     getGameModel() {
@@ -73,11 +78,35 @@ export default class Play extends Component {
         nextGame = checkWinner(nextGame);
         if (nextGame.gameState !== GAME_CONTINUE) {
             this.showGameStatus(nextGame.gameState);
+        } else {
+            this.checkComputerTurn(nextGame);
         }
     }
 
+    checkComputerTurn = (game) => {
+        const player = getCurrentPlayer(game);
+        if (player.isHuman || !this.props.againstComputer) {
+            return;
+        }
+
+        this.setState({ canPlay: false });
+        this.fetchColumn(game).then((bestPosition) => {
+            this.pickPebble(bestPosition);
+            this.setState({ canPlay: true });
+        });
+    }
+
+    fetchColumn = (game) => {
+        return fetch(config.apiUrl, {
+            method: 'POST',
+            body: JSON.stringify({ Score: game.score, Board: game.board }),
+        })
+        .then(response => response.text())
+        .then(parseInt);
+    }
+
     render() {
-        const { game } = this.state;
+        const { game, canPlay } = this.state;
         const highlightPlayerOne = (game.currentIndexPlayer === 0);
 
         return (
@@ -95,6 +124,7 @@ export default class Play extends Component {
                         board={game.board}
                         currentIndexPlayer={game.currentIndexPlayer}
                         pickPebble={this.pickPebble}
+                        canPlay={canPlay}
                     />
                 </View>
 

@@ -19,6 +19,11 @@ export default class Board extends Component {
         board: PropTypes.arrayOf(React.PropTypes.number).isRequired,
         pickPebble: PropTypes.func.isRequired,
         currentIndexPlayer: PropTypes.number.isRequired,
+        canPlay: PropTypes.bool,
+    }
+
+    static defaultProps = {
+        canPlay: true,
     }
 
     pickPebble = (position) => {
@@ -38,7 +43,7 @@ export default class Board extends Component {
                         onPress={this.pickPebble}
                         pitValue={pit}
                         pitIndex={size - 1 - i}
-                        enabled={this.props.currentIndexPlayer === 1}
+                        enabled={this.props.currentIndexPlayer === 1 && this.props.canPlay}
                         key={`topBoard-${i}`}
                     />
                 )}
